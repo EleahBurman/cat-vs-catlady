@@ -1,17 +1,19 @@
-#Cat Vs Cat Lady
+# Cat Vs Cat Lady
 
 ![Cat Vs Cat Lady Screenshot](./assets/images/catvscatladyscreenshot.png)
 
-## [Plat Cat Vs Cat Lady]
+## [Play Cat Vs Cat Lady](https://catvscatlady.fly.dev/)
 
-## Getting Started
+## 😻 Getting Started
 
-Cat Vs Cat Lady was created for all the frustrated cat owners out there that also love tic-tac-toe.  The game play is as follows:
+Cat Vs Cat Lady is a game designed for frustrated cat owners who also happen to love tic-tac-toe. It provides a delightful twist on the classic game, allowing players to choose between playing as a cat or a cat lady. Engage in strategic battles and aim to claim victory!
 
-* The player either plays as cat or cat lady and selects a square.
-* The next player chooses a square.
-* The player that gets three squares in a row wins.
-* A new game is started by the reset button.
+## 😼 How to Play
+
+1. **Choose Your Side**: Decide whether you want to play as the mischievous cat or the cunning cat lady.
+2. **Select a Square**: Take turns with the other player to choose a square on the game board.
+3. **Win the Game**: The player who successfully claims three squares in a row emerges as the winner.
+4. **Start a New Game**: Use the reset button to initiate a fresh game and continue the exciting competition.
 
 ##  ✍🏻 Attributions
 
