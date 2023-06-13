@@ -2,6 +2,16 @@
 title {
   font-size: large;
 }
+
+h1 {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+h2{
+  padding:0;
+}
+
 body {
   background-image: url("../assets/images/catbg.jpg");
   background-size: cover;
@@ -41,7 +51,11 @@ img {
 
 button#reset-btn {
   background-color: aqua;
-  color:darkblue;
+  color:black;
+  font-weight: bold;
   border-radius:10px;
   box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+  width: 60px;
+  height: 30px;
+  margin-top: 25px;
 }
