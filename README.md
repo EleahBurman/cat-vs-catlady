@@ -2,7 +2,7 @@
 
 ![Cat Vs Cat Lady Screenshot](./assets/images/catvscatladyscreenshot.png)
 
-## [Play Cat Vs Cat Lady](https://catvscatlady.fly.dev/)
+## [Play Cat Vs Cat Lady](https://catvscatlady.surge.sh/)
 
 ## 😻 Getting Started
 
