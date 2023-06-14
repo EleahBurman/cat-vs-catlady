@@ -61,15 +61,13 @@ function updateBoard(){
     else if (boardVal === 1) {
       //should display X
       squareEls[idx].textContent = 'Cat Lady'
-      squareEls[idx].innerHTML =`<img src="./assets/images/frustratedwoman.jpg" alt="a frustrated woman">`
-      //squareEls[idx].style.backgroundColor = 'yellow'
+      squareEls[idx].innerHTML =`<img src="../assets/images/frustratedwoman.jpg" alt="a frustrated woman">`
     }
     //if boardVal is 1 then this happens
     else if (boardVal === -1) {
       //should display O
       squareEls[idx].textContent = 'Cat'
-      squareEls[idx].innerHTML =`<img src="./assets/images/winkingcat.jpg" alt="a square cat">`
-      //squareEls[idx].style.backgroundColor = 'green'
+      squareEls[idx].innerHTML =`<img src="../assets/images/winkingcat.jpg" alt="a square cat">`
     }
   })
 }
