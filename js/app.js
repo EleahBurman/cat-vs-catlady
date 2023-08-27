@@ -14,7 +14,12 @@ const winningCombos = [
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let board, turn, winner, tie 
+let board, turn, winner, tie, cat, catlady
+let scoreBoard = {
+  catWins: 0,
+  catLadyWins: 0,
+  ties: 0
+}
 
 
 
@@ -23,6 +28,9 @@ const squareEls = document.querySelectorAll('.sqr')
 const messageEl = document.querySelector('#message')
 //reset button
 const resetBtn = document.getElementById('reset-btn')
+const catScore = document.getElementById('catScore')
+const catLadyScore = document.getElementById('catLadyScore')
+const gameBoardEl = document.querySelector('.board')
 
 /*----------------------------- Event Listeners -----------------------------*/
 //square els targeting the item clickSquare to invote click and handle Click function
@@ -41,6 +49,7 @@ function init (){
   turn = 1
   winner = false
   tie = false
+  updateScoreBoard()
   render ()
 }
 
@@ -111,16 +120,28 @@ function checkForTie(){
     return
   }
   tie = true
+  scoreBoard.ties++
 }
 
-function checkForWinner(){
-  winningCombos.forEach(function(combo){
-  //[0,1,2]
-  //if board values at each index in the combo sum to 3, x has won the game
+function checkForWinner() {
+  winningCombos.forEach(function(combo) {
     if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]]) === 3) {
-    winner = true
+      winner = true;
+      if (turn === 1) {
+        scoreBoard.catLadyWins++;
+      } else {
+        scoreBoard.catWins++;
+      }
+      updateScoreBoard()
     }
-  })
+  });
+}
+
+
+function updateScoreBoard() {
+  catScore.textContent = scoreBoard.catWins;
+  catLadyScore.textContent = scoreBoard.catLadyWins;
+  tieScore.textContent = scoreBoard.ties;
 }
 
 function switchPlayerTurn() {
@@ -129,3 +150,4 @@ function switchPlayerTurn() {
   }
   (turn *= -1)
 }
+
