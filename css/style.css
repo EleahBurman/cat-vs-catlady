@@ -4,11 +4,14 @@ title {
 }
 
 h1 {
+  margin-top: 150px;
+  font-size: 35px;
   margin-bottom: 0;
   padding: 0;
 }
 
 h2{
+  font-size: 20px;
   padding:0;
 }
 
@@ -58,4 +61,20 @@ button#reset-btn {
   width: 60px;
   height: 30px;
   margin-top: 25px;
+}
+
+.scoreboard-div{
+  margin-top: 30px;
+  height: 50px;
+}
+
+.scoreDisplay{
+  font-size: 20px;
+}
+
+#catScore,
+#catLadyScore,
+#tieScore{
+  width: 30px;
+  margin: 5px;
 }
