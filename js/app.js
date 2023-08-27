@@ -133,6 +133,7 @@ function checkForWinner() {
         scoreBoard.catWins++;
       }
       updateScoreBoard()
+      confetti.start(1500);
     }
   });
 }

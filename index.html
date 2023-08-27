@@ -15,6 +15,7 @@
   type="image/png"
   sizes="16x16"
   >
+	<script defer src="./js/confetti.js"></script>
 	<script defer src="./js/app.js"></script>
 	<title>Cat v.s. Cat Lady</title>
 </head>
@@ -33,23 +34,20 @@
 			<div class="sqr" id="sq8"></div>
 	</section>    
 	<button id="reset-btn">Reset</button>
-	<footer>
-		<div class="scoreboard-div">
-			<h2>Scoreboard</h2>
-			<div class="player-1-score-div">
-					<div class="scoreDisplay" id="cat"><img src="./assets/images/winkingcat.jpg" alt="cat score">Cat:</div>
-					<div class="scoreDisplay" id="catScore">0</div>
-			</div>
-			<div class="player-2-score-div">
-					<div class="scoreDisplay" id="catLady"><img src="./assets/images/frustratedwoman.jpg" alt="cat lady score">Cat Lady:</div>
-					<div class="scoreDisplay" id="catLadyScore">0</div>
-			</div>
-			<div class="tie-score-div">
-					<div class="scoreDisplay" id="tie"><img src="./assets/images/winkingcat.jpg" alt="cat score"> & <img src="./assets/images/frustratedwoman.jpg" alt="cat lady score">Ties:</div>
-					<div class="scoreDisplay" id="tieScore">0</div>
-			</div>
+	<div class="scoreboard">
+		<h2>Scoreboard</h2>
+		<div class="player-1-score-div">
+				<div class="scoreDisplay" id="cat"><img src="./assets/images/winkingcat.jpg" alt="cat score">Cat:</div>
+				<div class="scoreDisplay" id="catScore">0</div>
+		</div>
+		<div class="player-2-score-div">
+				<div class="scoreDisplay" id="catLady"><img src="./assets/images/frustratedwoman.jpg" alt="cat lady score">Cat Lady:</div>
+				<div class="scoreDisplay" id="catLadyScore">0</div>
+		</div>
+		<div class="tie-score-div">
+				<div class="scoreDisplay" id="tie"><img src="./assets/images/winkingcat.jpg" alt="cat score"> & <img src="./assets/images/frustratedwoman.jpg" alt="cat lady score">Ties:</div>
+				<div class="scoreDisplay" id="tieScore">0</div>
+		</div>
 	</div>
-	
-	</footer>
 </body>
 </html>
