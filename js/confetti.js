@@ -36,8 +36,11 @@ var confetti = {
 	var context = null;
 
 	function resetParticle(particle, width, height) {
-		particle.color = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
-		particle.color2 = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
+		const emojis = ['😺', '😸', '😻', '🐱', '🐾', '🐈', '😽', '😼', '🙀', '😿', '😾'];
+		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+		particle.text = randomEmoji;
+		// particle.color = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
+		// particle.color2 = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
 		particle.x = Math.random() * width;
 		particle.y = Math.random() * height - height;
 		particle.diameter = Math.random() * 10 + 5;
@@ -163,26 +166,15 @@ var confetti = {
 
 	function drawParticles(context) {
 		var particle;
-		var x, y, x2, y2;
 		for (var i = 0; i < particles.length; i++) {
 			particle = particles[i];
 			context.beginPath();
-			context.lineWidth = particle.diameter;
-			x2 = particle.x + particle.tilt;
-			x = x2 + particle.diameter / 2;
-			y2 = particle.y + particle.tilt + particle.diameter / 2;
-			if (confetti.gradient) {
-				var gradient = context.createLinearGradient(x, particle.y, x2, y2);
-				gradient.addColorStop("0", particle.color);
-				gradient.addColorStop("1.0", particle.color2);
-				context.strokeStyle = gradient;
-			} else
-				context.strokeStyle = particle.color;
-			context.moveTo(x, particle.y);
-			context.lineTo(x2, y2);
-			context.stroke();
+			context.font = particle.diameter + 'px Arial'; // Set the font size based on particle diameter
+			context.fillStyle = particle.color; // Set the particle color
+			context.fillText(particle.text, particle.x, particle.y); // Draw the text (emoji) at the particle's position
 		}
 	}
+	
 
 	function updateParticles() {
 		var width = window.innerWidth;
