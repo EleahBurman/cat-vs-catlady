@@ -39,8 +39,8 @@ var confetti = {
 		const emojis = ['😺', '😸', '🐈', '🐈‍⬛', '😻', '🐱', '🐾', '🐈', '🐈‍⬛', '😽', '😼', '🙀', '🐈', '😿', '😾', '🐈‍⬛'];
 		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 		particle.text = randomEmoji;
-		// particle.color = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
-		// particle.color2 = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
+		particle.color = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
+		particle.color2 = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
 		particle.x = Math.random() * width;
 		particle.y = Math.random() * height - height;
 		particle.diameter = Math.random() * 20 + 10;
@@ -165,15 +165,26 @@ var confetti = {
 	}
 
 	function drawParticles(context) {
-		var particle;
-		for (var i = 0; i < particles.length; i++) {
-			particle = particles[i];
-			context.beginPath();
-			context.font = particle.diameter + 'px Arial'; // Set the font size based on particle diameter
-			context.fillStyle = particle.color; // Set the particle color
-			context.fillText(particle.text, particle.x, particle.y); // Draw the text (emoji) at the particle's position
-		}
-	}
+    var particle;
+    for (var i = 0; i < particles.length; i++) {
+        particle = particles[i];
+        context.beginPath();
+        context.font = particle.diameter + 'px Arial'; // Set the font size based on particle diameter
+
+        // Use particle.color and particle.color2 for gradient effect
+        if (confetti.gradient) {
+            var gradient = context.createLinearGradient(particle.x - particle.diameter, particle.y - particle.diameter, particle.x + particle.diameter, particle.y + particle.diameter);
+            gradient.addColorStop(0, particle.color);
+            gradient.addColorStop(1, particle.color2);
+            context.fillStyle = gradient;
+        } else {
+            context.fillStyle = particle.color; // Set the particle color
+        }
+
+        context.fillText(particle.text, particle.x, particle.y); // Draw the text (emoji) at the particle's position
+    }
+}
+
 	
 
 	function updateParticles() {

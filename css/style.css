@@ -15,6 +15,11 @@ h2{
   padding:0;
 }
 
+.sqr:hover {
+  background-color: #6c76ff;
+  z-index:2;
+}
+
 body {
   background-image: url("../assets/images/catbg.jpg");
   background-size: cover;
@@ -61,6 +66,10 @@ button#reset-btn {
   width: 60px;
   height: 30px;
   margin-top: 25px;
+}
+
+#reset-btn:hover{
+  filter:brightness(1.5)
 }
 
 .scoreboard{
