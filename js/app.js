@@ -84,13 +84,13 @@ function updateBoard(){
 function updateMessage(){
   if (!winner && !tie) {
     //condition ? resultIfTruthy : result if falsy
-    messageEl.innerHTML = `${turn === 1 ? 'Cat Lady' : 'Cat'}, it's your turn! Be paw-sitive!`
+    messageEl.innerHTML = `${turn === 1 ? 'Cat Lady' : 'Cat'}, it's your turn! 🐾 Be paw-sitive!`
   }
   else if (!winner && tie) {
-    messageEl.innerHTML = `We can't all be purrfect. Play again?`
+    messageEl.innerHTML = `We can't all be purrfect. 🙀 Play again?`
   }
   else {
-    messageEl.innerHTML = `${turn === 1 ? 'Cat Lady' : 'Cat'} wins! You're the cat's meow! Lets play!`
+    messageEl.innerHTML = `${turn === 1 ? 'Cat Lady' : 'Cat'} wins! 😻 You're the cat's meow! Lets play!`
   }
 }
 //function called handleClick with event parameter

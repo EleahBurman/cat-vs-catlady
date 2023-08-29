@@ -36,7 +36,7 @@ var confetti = {
 	var context = null;
 
 	function resetParticle(particle, width, height) {
-		const emojis = ['😺', '😸', '🐈', '🐈‍⬛', '😻', '🐱', '🐾', '🐈', '🐈‍⬛', '😽', '😼', '🙀', '🐈', '😿', '😾', '🐈‍⬛'];
+		const emojis = ['😺', '😸', '🐈', '😻', '🐱', '🐾', '🐈', '😽', '😼', '🙀', '🐈', '😿', '😾';
 		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 		particle.text = randomEmoji;
 		particle.color = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");

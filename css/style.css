@@ -93,3 +93,8 @@ button#reset-btn {
   float: left;
   position: fixed;
 }
+
+#message{
+  font-style: italic;
+  margin-top: 0;
+}
