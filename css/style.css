@@ -7,6 +7,8 @@ title {
   display: block;
   justify-content: center;
   align-items: center;
+  width: 212px;
+  height: 132px;
 }
 
 #cat, #catlady{
