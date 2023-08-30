@@ -8,6 +8,10 @@ title {
   justify-content: center;
   align-items: center;
 }
+
+#cat, #catlady{
+  border-radius:10px;
+}
 .game-play{
   display: none;
   justify-content: center;
