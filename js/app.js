@@ -15,6 +15,7 @@ const winningCombos = [
 
 /*---------------------------- Variables (state) ----------------------------*/
 let board, turn, winner, tie, cat, catlady
+let currentPlayer=null
 let scoreBoard = {
   catWins: 0,
   catLadyWins: 0,
@@ -23,7 +24,12 @@ let scoreBoard = {
 
 
 
+
 /*------------------------ Cached Element References ------------------------*/
+const startScreen = document.querySelector('.start-screen')
+const gamePlay = document.querySelector('.game-play')
+const catButton = document.getElementById('cat')
+const catLadyButton = document.getElementById('catlady')
 const squareEls = document.querySelectorAll('.sqr')
 const messageEl = document.querySelector('#message')
 //reset button
@@ -33,6 +39,8 @@ const catLadyScore = document.getElementById('catLadyScore')
 const gameBoardEl = document.querySelector('.board')
 
 /*----------------------------- Event Listeners -----------------------------*/
+catButton.addEventListener('click', () => selectPlayer('cat'))
+catLadyButton.addEventListener('click', () => selectPlayer('catlady'))
 //square els targeting the item clickSquare to invote click and handle Click function
 squareEls.forEach(function(squareEl){
   squareEl.addEventListener('click', handleClick)
@@ -42,11 +50,20 @@ resetBtn.addEventListener('click', init)
 
 
 /*-------------------------------- Functions --------------------------------*/
-init()
+function selectPlayer (player){
+  currentPlayer = player
+  startGame()
+}
+function startGame(){
+  startScreen.style.display='none'
+  gamePlay.style.display='block'
+  init()
+}
+
 
 function init (){
   board = [null, null, null, null, null, null, null, null, null]
-  turn = 1
+  turn = (currentPlayer === 'catlady') ? 1 : -1
   winner = false
   tie = false
   updateScoreBoard()
@@ -95,19 +112,15 @@ function updateMessage(){
 }
 //function called handleClick with event parameter
 function handleClick(evt) {
-  //Make strings into just numbers using substring. Used parse int to make string into number. Set equal to variable sqIdx. Could also use replace('sq', '').
-  const sqIdx = parseInt(evt.target.id.substring(2))
-  console.log('this is square index', sqIdx)
-  // if sqIdx has a value (true because a number) then return handleClick
-  if(board[sqIdx] || winner) {
-    return
-    }
-  placePiece(sqIdx)
-  checkForTie()
-  checkForWinner()
-  switchPlayerTurn()
-  render()
+  if (!currentPlayer || board[parseInt(evt.target.id.substring(2))] || winner) {
+    return;
   }
+  placePiece(parseInt(evt.target.id.substring(2)));
+  checkForTie();
+  checkForWinner();
+  switchPlayerTurn();
+  render();
+}
 
 //create function called placePiece that accepts an index parameter
 function placePiece(idx){
@@ -149,6 +162,6 @@ function switchPlayerTurn() {
   if (winner === true){
     return
   }
-  (turn *= -1)
+  turn = (currentPlayer === 'catlady') ? 1 : -1
 }
 

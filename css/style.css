@@ -3,6 +3,17 @@ title {
   font-size: large;
 }
 
+.start-screen{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.game-play{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   margin-top: 100px;
   font-size: 35px;
@@ -36,6 +47,7 @@ body {
 
 section.board {
   display: grid;
+  justify-content: center;
   text-align: center;
   grid-template-rows: repeat(3, 10vmin);
   grid-template-columns: repeat(3, 10vmin);
@@ -78,6 +90,9 @@ button#reset-btn {
   padding: 10px;
 }
 
+.player-1-score, .player-2-score, .tie-score{
+  border-color: transparent;
+}
 .scoreDisplay{
   font-size: 20px;
 }
