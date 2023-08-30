@@ -162,6 +162,6 @@ function switchPlayerTurn() {
   if (winner === true){
     return
   }
-  turn = (currentPlayer === 'catlady') ? 1 : -1
+  turn *= -1
 }
 
