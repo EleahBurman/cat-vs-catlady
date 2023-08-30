@@ -125,3 +125,24 @@ button#reset-btn {
   font-style: italic;
   margin-top: 0;
 }
+
+@media screen and (min-width: 390px){
+  .game-play{
+    width: 70vw;
+    border: transparent
+  }
+
+  .scoreboard{
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    border: transparent
+  }
+  .player-1-score{
+    margin-left: 7vw;
+  }
+  .scoreDisplay{
+    font-size: 14px;
+  }
+
+}
