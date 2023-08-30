@@ -13,6 +13,7 @@ title {
 
 #cat, #catlady{
   border-radius:10px;
+  cursor: pointer;
 }
 
 #cat:hover, #catlady:hover{
@@ -90,6 +91,7 @@ button#reset-btn {
   width: 60px;
   height: 30px;
   margin-top: 25px;
+  cursor: pointer;
 }
 
 #reset-btn:hover{
