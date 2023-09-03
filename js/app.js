@@ -50,7 +50,8 @@ computer.addEventListener('click', () => {
   initWithAi();
 });
 human.addEventListener('click', () => {
-  selectPlayer('human'); // Add the 'human' argument here
+  vsHumanOrComputer.style.display = 'none'; // Show the vs-human-or-computer section
+  startScreen.style.display = 'block'; // Hide the game-play section
 });
 /*-------------------------------- Functions --------------------------------*/
 function selectPlayer(player) {

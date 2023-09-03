@@ -16,12 +16,19 @@ title {
   height: 132px;
 }
 
-#cat, #catlady{
+.button{
+  background-color: aqua;
+  color:black;
+  font-weight: bold;
   border-radius:10px;
   cursor: pointer;
 }
 
-#cat:hover, #catlady:hover{
+#human:hover, #computer:hover{
+  box-shadow: 0px 0px 0px 2px rgb(0,0,0);
+  background-color: #fcddb8;
+}
+#cat:hover, #catlady:hover {
   box-shadow: 0px 0px 0px 2px rgb(0,0,0);
   filter: brightness(108%);
 }
