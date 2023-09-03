@@ -53,6 +53,25 @@ human.addEventListener('click', () => {
   vsHumanOrComputer.style.display = 'none'; // Show the vs-human-or-computer section
   startScreen.style.display = 'block'; // Hide the game-play section
 });
+// Add an event listener to a parent element that contains '.sqr' elements
+document.querySelector('.board').addEventListener('mouseover', function (event) {
+  // Check if the event target is an '.sqr' element
+  if (event.target.classList.contains('sqr')) {
+    // Apply the hover effect styles here
+    event.target.style.backgroundColor = '#6c76ff';
+    event.target.style.zIndex = '2';
+  }
+});
+
+// Add another event listener to remove the hover effect when the mouse leaves
+document.querySelector('.board').addEventListener('mouseout', function (event) {
+  // Check if the event target is an '.sqr' element
+  if (event.target.classList.contains('sqr')) {
+    // Remove the hover effect styles here
+    event.target.style.backgroundColor = 'transparent';
+    event.target.style.zIndex = '0';
+  }
+});
 /*-------------------------------- Functions --------------------------------*/
 function selectPlayer(player) {
   startScreen.style.display = 'block';
