@@ -1,6 +1,6 @@
 # Cat Vs Cat Lady
 
-![Cat Vs Cat Lady Screenshot](./assets/images/screenshot.png)
+![Cat Vs Cat Lady Screenshot](./assets/images/screenshot-cat-vs-catlady.png)
 
 ## [Play Cat Vs Cat Lady](https://catvscatlady.surge.sh/)
 
