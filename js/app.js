@@ -22,7 +22,7 @@ let scoreBoard = {
   catLadyWins: 0,
   ties: 0
 };
-
+let isFirstComputerMove = true;
 /*------------------------ Cached Element References ------------------------*/
 const human = document.getElementById('human');
 const computer = document.getElementById('computer');
@@ -138,7 +138,13 @@ function handleAiTurn() {
         checkForWinner();
         switchPlayerTurn();
         render();
-      }, 2000);
+
+        if (isFirstComputerMove) {
+          setTimeout(() => {
+            isFirstComputerMove = false;
+          }, 0);
+        }
+      }, isFirstComputerMove ? 500 : 2000); // 
     }
   }
 }
