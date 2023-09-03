@@ -107,7 +107,18 @@ button#reset-btn {
   cursor: pointer;
 }
 
-#reset-btn:hover{
+button#reset-with-ai-btn {
+  background-color: aqua;
+  color:black;
+  font-weight: bold;
+  border-radius:10px;
+  width: 120px;
+  height: 25px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+#reset-btn:hover, #reset-with-ai-btn:hover{
   background-color: #fcddb8;
   box-shadow: 0px 0px 2px 2px rgb(0,0,0);
 }

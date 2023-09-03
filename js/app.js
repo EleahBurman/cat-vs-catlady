@@ -34,6 +34,7 @@ const catLadyButton = document.getElementById('catlady');
 const squareEls = document.querySelectorAll('.sqr');
 const messageEl = document.querySelector('#message');
 const resetBtn = document.getElementById('reset-btn');
+const resetWithAiBtn = document.getElementById('reset-with-ai-btn');
 const catScore = document.getElementById('catScore');
 const catLadyScore = document.getElementById('catLadyScore');
 const tieScore = document.getElementById('tieScore'); // Added tieScore element
@@ -46,6 +47,7 @@ squareEls.forEach(function (squareEl) {
   squareEl.addEventListener('click', handleClick);
 });
 resetBtn.addEventListener('click', init);
+resetWithAiBtn.addEventListener('click', initWithAi);
 computer.addEventListener('click', () => {
   initWithAi();
 });
