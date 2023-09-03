@@ -3,8 +3,13 @@ title {
   font-size: large;
 }
 
-.start-screen{
+.vs-human-or-computer{
   display: block;
+  justify-content: center;
+  align-items: center;
+}
+.start-screen{
+  display: none;
   justify-content: center;
   align-items: center;
   width: 212px;

@@ -1,6 +1,6 @@
 var confetti = {
 	maxCount: 500,		//set max confetti count
-	speed: 5,			//set the particle animation speed
+	speed: 3,			//set the particle animation speed
 	frameInterval: 15,	//the confetti animation frame interval in milliseconds
 	alpha: 1.0,			//the alpha opacity of the confetti (between 0 and 1, where 1 is opaque and 0 is invisible)
 	gradient: false,	//whether to use gradients for the confetti particles
@@ -39,8 +39,8 @@ var confetti = {
 		const emojis = ['😺', '😸', '🐈', '😻', '🐱', '🐾', '🐈', '😽', '😼', '🙀', '🐈', '😿', '😾'];
 		const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 		particle.text = randomEmoji;
-		particle.color = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
-		particle.color2 = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
+		particle.fillStyle = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
+		particle.strokeStyle = colors[(Math.random() * colors.length) | 0] + (confetti.alpha + ")");
 		particle.x = Math.random() * width;
 		particle.y = Math.random() * height - height;
 		particle.diameter = Math.random() * 20 + 10;
