@@ -74,7 +74,7 @@ body {
 }
 
 body.light {
-  background-image: url("../assets/images/light-bg-7.png");
+  background-image: url("../assets/images/light-bg.png");
   background-size: 60%;
   background-color: #fae6e3;
 }
