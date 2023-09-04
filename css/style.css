@@ -9,6 +9,7 @@ title {
   align-items: center;
   width: 170px;
 }
+
 .start-screen{
   display: none;
   justify-content: center;
@@ -72,6 +73,16 @@ body {
   align-items: center;
 }
 
+body.light {
+  background-image: url("../assets/images/light-bg-7.png");
+  background-size: 60%;
+  background-color: #fae6e3;
+}
+
+h1.light, h2#message.light{
+  color: hotpink;
+}
+
 section.board {
   display: grid;
   justify-content: center;
@@ -118,9 +129,21 @@ button#reset-with-ai-btn {
   cursor: pointer;
 }
 
-#reset-btn:hover, #reset-with-ai-btn:hover{
+.light-dark-btn{
+  background-color: aqua;
+  color:black;
+  font-weight: bold;
+  border-radius:10px;
+  cursor: pointer;
+}
+
+#reset-btn:hover, #reset-with-ai-btn:hover, .light-dark-btn:hover{
   background-color: #fcddb8;
   box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+
+.reset, .darklightmode{
+  border: transparent;
 }
 
 .scoreboard{

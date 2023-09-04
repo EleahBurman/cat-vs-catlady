@@ -34,11 +34,13 @@ const catLadyButton = document.getElementById('catlady');
 const squareEls = document.querySelectorAll('.sqr');
 const messageEl = document.querySelector('#message');
 const resetBtn = document.getElementById('reset-btn');
+const lightDarkButton = document.querySelector('.light-dark-btn')
 const resetWithAiBtn = document.getElementById('reset-with-ai-btn');
 const catScore = document.getElementById('catScore');
 const catLadyScore = document.getElementById('catLadyScore');
 const tieScore = document.getElementById('tieScore'); // Added tieScore element
 const gameBoardEl = document.querySelector('.board');
+const body = document.querySelector('body')
 
 /*----------------------------- Event Listeners -----------------------------*/
 catButton.addEventListener('click', () => selectPlayer('cat'));
@@ -74,6 +76,8 @@ document.querySelector('.board').addEventListener('mouseout', function (event) {
     event.target.style.zIndex = '0';
   }
 });
+//lightdark button to click for a light mode versus dark mode
+lightDarkButton.addEventListener('click', light)
 /*-------------------------------- Functions --------------------------------*/
 function selectPlayer(player) {
   startScreen.style.display = 'block';
@@ -234,3 +238,26 @@ function switchPlayerTurn() {
   }
   currentPlayer = (currentPlayer === 'catlady') ? 'cat' : 'catlady';
 }
+
+function light(){
+  body.classList.toggle('light')
+  if (body.classList.contains('light')){
+    lightDarkButton.innerText = 'Light Mode'
+  } else {
+    lightDarkButton.innerText = 'Dark Mode'
+  }
+  const headerOne = document.querySelector('h1')
+  headerOne.classList.toggle('light')
+  const headerTwo = document.querySelector('h2#message')
+  headerTwo.classList.toggle('light')
+}
+
+function checkLightPref() {
+  if (
+    window.matchMedia('(prefers-color-scheme:light)').matches &&
+    body.className !== 'light'
+  ) {
+    light()
+  }
+}
+checkLightPref()
