@@ -33,6 +33,7 @@ Cat Vs Cat Lady is a game designed for frustrated cat owners who also happen to 
 - [X] Add AI computer player.
 - [X] Add cat confetti.
 - [X] Add scoreboard.
+- [X] Add light and dark mode.
 - [ ] Add AI levels of easy, medium, and hard using minimax.
 - [ ] Add color to cat confetti using canvas.
 - [ ] Add path to cat confetti using canvas.
