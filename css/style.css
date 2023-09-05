@@ -8,6 +8,7 @@ title {
   justify-content: center;
   align-items: center;
   width: 170px;
+  padding: auto;
 }
 
 .start-screen{
@@ -16,7 +17,7 @@ title {
   align-items: center;
   width: 212px;
   height: 150px;
-  
+  padding: auto;
 }
 
 .button{
@@ -180,6 +181,7 @@ button#reset-with-ai-btn {
 }
 
 @media screen and (min-width: 390px){
+
   .game-play{
     width: 70vw;
     border: transparent
