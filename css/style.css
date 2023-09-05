@@ -116,6 +116,7 @@ button#reset-btn {
   height: 40px;
   margin-top: 25px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 button#reset-with-ai-btn {
@@ -127,6 +128,7 @@ button#reset-with-ai-btn {
   height: 40px;
   margin-top: 25px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .light-dark-btn{
@@ -135,6 +137,7 @@ button#reset-with-ai-btn {
   font-weight: bold;
   border-radius:10px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 #reset-btn:hover, #reset-with-ai-btn:hover, .light-dark-btn:hover{
