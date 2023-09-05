@@ -199,3 +199,28 @@ button#reset-with-ai-btn {
   }
 
 }
+
+@media screen and (min-width: 375px){
+  .game-play{
+    width: 70vw;
+    border: transparent
+  }
+
+  .scoreboard{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    border: transparent;
+    margin-left: 17px;
+  }
+  .player-1-score{
+    margin-left: 7vw;
+  }
+  .scoreDisplay{
+    font-size: 14px;
+  }
+  .scoreDisplay img{
+    width:25px;
+    height:25px;
+  }
+}
