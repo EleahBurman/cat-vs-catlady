@@ -1,5 +1,5 @@
 
-title {
+  title {
   font-size: large;
 }
 
@@ -154,13 +154,22 @@ button#reset-with-ai-btn {
   margin-top: 25px;
   height: 50px;
   padding: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.player-1-score{
+  margin-left: 40%;
 }
 
 .player-1-score, .player-2-score, .tie-score{
   border-color: transparent;
+  justify-content: center;
 }
+
 .scoreDisplay{
   font-size: 20px;
+  justify-content: center;
 }
 
 #catScore,
@@ -180,6 +189,11 @@ button#reset-with-ai-btn {
   margin-top: 0;
 }
 
+.scoreDisplay img{
+  width: 33px;
+  height:33px;
+}
+
 @media screen and (min-width: 390px){
 
   .game-play{
@@ -191,15 +205,17 @@ button#reset-with-ai-btn {
     width: 60vw;
     justify-content: center;
     align-items: center;
-    border: transparent
+    border: transparent;
   }
-  .player-1-score{
-    margin-left: 7vw;
-  }
+
   .scoreDisplay{
     font-size: 14px;
   }
 
+  .scoreDisplay img{
+    width:30px;
+    height:30px;
+  }
 }
 
 @media screen and (min-width: 375px){
@@ -213,11 +229,8 @@ button#reset-with-ai-btn {
     justify-content: center;
     align-items: center;
     border: transparent;
-    margin-left: 17px;
   }
-  .player-1-score{
-    margin-left: 7vw;
-  }
+
   .scoreDisplay{
     font-size: 14px;
   }
