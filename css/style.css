@@ -150,6 +150,10 @@ button#reset-with-ai-btn {
   border: transparent;
 }
 
+.sqr{
+  cursor: pointer;
+}
+
 .scoreboard{
   margin-top: 25px;
   height: 50px;
