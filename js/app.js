@@ -23,6 +23,7 @@ let scoreBoard = {
   ties: 0
 };
 let isFirstComputerMove = true;
+let isComputerTurn = false;
 /*------------------------ Cached Element References ------------------------*/
 const human = document.getElementById('human');
 const computer = document.getElementById('computer');
@@ -126,6 +127,7 @@ function initWithAi() {
 
 function handleAiTurn() {
   console.log("AI is taking its turn");
+  isComputerTurn = true; // Disable human interaction
 
   if (!winner) {
     const emptySquareEls = Array.from(squareEls).filter((squareEl) => {
@@ -142,16 +144,18 @@ function handleAiTurn() {
         checkForWinner();
         switchPlayerTurn();
         render();
+        isComputerTurn = false; // Re-enable human interaction
 
         if (isFirstComputerMove) {
           setTimeout(() => {
             isFirstComputerMove = false;
           }, 0);
         }
-      }, isFirstComputerMove ? 500 : 2000); // 
+      }, isFirstComputerMove ? 500 : 2000);
     }
   }
 }
+
 
 function render() {
   updateBoard();
@@ -184,7 +188,7 @@ function updateMessage() {
 }
 
 function handleClick(evt) {
-  if (!currentPlayer || board[parseInt(evt.target.id.substring(2))] !== null || winner) {
+  if (isComputerTurn || !currentPlayer || board[parseInt(evt.target.id.substring(2))] !== null || winner) {
     return;
   }
   const idx = parseInt(evt.target.id.substring(2));
