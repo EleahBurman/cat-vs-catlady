@@ -266,3 +266,11 @@ button#reset-with-ai-btn {
     height:25px;
   }
 }
+
+.light-color{
+  color: #e56dff;
+}
+
+.dark-color{
+  color: #6c76ff;
+}

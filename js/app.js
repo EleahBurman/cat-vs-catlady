@@ -247,8 +247,10 @@ function light(){
   body.classList.toggle('light')
   if (body.classList.contains('light')){
     lightDarkButton.innerText = 'Light Mode'
+    lightDarkButton.classList.toggle('light-color')
   } else {
     lightDarkButton.innerText = 'Dark Mode'
+    lightDarkButton.classList.toggle('dark-color')
   }
   const headerOne = document.querySelector('h1')
   headerOne.classList.toggle('light')
